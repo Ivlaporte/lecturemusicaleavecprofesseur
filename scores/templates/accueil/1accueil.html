@@ -1,0 +1,63 @@
+{% extends "menu.html" %}
+{% load static %} <!-- ici aussi!!-->
+{% block content %}
+
+<!-- /.row -->
+<!-- Header --  <<<<<< remettre dans menupoinhtml!!!!!!!!!-->
+<header class="bg-info py-2 mb-5">
+  <div class="container h-70">
+    <div class="row h-100 align-items-center">
+      <div class="col-lg-12">
+        <h1 class="display-4 text-white mt-5 mb-2">Une discipline distincte</h1>
+        <p class="lead mb-5 text-white-50">J’ai longtemps vu des professeurs insister pour qu’un élève apprenne à lire
+          les notes de la partition, dans le but d’apprendre à jouer du piano. Cette école de
+          pensée affirme donc que seuls les bons lecteurs peuvent jouer de la grande musique.</p>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="row" style="background-image: url('{{ djaLMAP.partitions.AToutEmportement.jpg }}') ;">
+
+  <div class="col-md-4 mb-5">
+      <div class="card h-100">
+        <img class="card-img-top" src="{% static 'djaLMAP/partitions/LecturePAP1-page-001.jpg' %}" alt="">
+        <div class="card-body">
+          <h4 class="card-title">Exercice niveau 1</h4>
+          <p class="card-text">Intervalles simples.</br>Rythme simple.</br>
+            Doigtés simples.</p>
+        </div>
+        <!--div class="card-footer">
+          <a href="#" class="btn btn-primary">Find Out More!</a>
+        </div-->
+      </div>
+    </div>
+    <div class="col-md-4 mb-5">
+        <div class="card h-100">
+          <img class="card-img-top" src="{% static 'djaLMAP/partitions/LecturePAP3-page-001.jpg' %}" alt="">
+          <div class="card-body">
+            <h4 class="card-title">Exercice niveau 2</h4>
+            <p class="card-text">Intervalles, </br>changement de main</p>
+          </div>
+          <div class="card-footer">
+            <a href="#" class="btn btn-primary">Autres partitions niveau 2</a>
+          </div>
+        </div>
+      </div>
+    <div class="col-md-4 mb-5">
+      <div class="card h-100">
+        <img class="card-img-top" src="{% static 'djaLMAP/partitions/remajH1.jpg' %}" alt="">
+        <div class="card-body">
+          <h4 class="card-title">Exercices préparatoire à la lecture</h4>
+          <p class="card-text">Gammes</br>Chaînes d'accords</br>Dans la tonalité du morceau à lire</p>
+        </div>
+        <div class="card-footer">
+          <a href="#" class="btn btn-primary">Autres exercices</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <!-- /.row -->
+
+{% endblock %}

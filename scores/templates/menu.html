@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+{% load menu_tags %}
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>La lecture musicale avec professeur</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="{% static 'css/business-frontpage.css' %}" rel="stylesheet">
+
+  <!--personnal css-->
+  <link href="{% static 'css/menu.css' %}" rel="stylesheet">
+ 
+</head>
+
+<body>
+  <!-- Navigation -->
+<nav class="navbar navbar-expand-xl navbar-dark bg-dark fixed-top">
+  <a href="#" style="color:lightgray;">L M A P</a>
+  <!--button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">Go
+    <span class="navbar-toggler-icon"></span>
+  </button-->
+  <div class="collapse navbar-collapse" id="navbarCollapse">
+    <div class="navbar-nav">
+    </div>
+    <div class="navbar-nav ml-auto" >
+      <div class="dropdown" >
+        <a href="{% url 'partitions:partNiv1' %}" class="nav-item nav-link active dropdown-toggle" style="color:lightgray;">Partitions</a>
+        <div class="dropdown-menu">
+          <a href="{% url 'partitions:partNiv1' %}" class="dropdown-item">Niveau 1</a>
+          <a href="{% url 'partitions:partNiv2a' %}" class="dropdown-item">Niveau 2</a>
+          <a href="{% url 'partitions:partNiv3a' %}" class="dropdown-item">Niveau 3</a>
+          <a href="{% url 'partitions:inexistant' %}" class="dropdown-item">Niveau 4</a>
+          <a href="{% url 'partitions:inexistant' %}" class="dropdown-item">Niveau 5</a>
+          <a href="{% url 'partitions:inexistant' %}" class="dropdown-item">Niveau 6</a>
+          <a href="{% url 'partitions:inexistant' %}" class="dropdown-item">Niveau 7</a>
+          <a href="{% url 'partitions:inexistant' %}" class="dropdown-item">Niveau 8</a>
+          <a href="{% url 'partitions:inexistant' %}" class="dropdown-item">Niveau 9</a>
+          <a href="{% url 'partitions:inexistant' %}" class="dropdown-item">Niveau 10</a>
+        </div>
+      </div>
+      <a href="{% url 'partitions:gammes' %}" class="nav-item nav-link " style="color:lightgray;">Gammes</a>
+      <a href="{% url 'partitions:methode' %}" class="nav-item nav-link " style="color:lightgray;">Méthode d'apprentissage</a>
+      <a href="{% url 'partitions:contactLMAP' %}" class="nav-item nav-link" style="color:lightgray;">Me joindre</a>
+      <a href="{% url 'admin:index' %}" class="nav-item nav-link " style="color:lightgray;">Participants (login etc.)</a>
+    
+    </div>
+  </div>
+</nav>
+
+<!-- extention -->
+<div class="row">
+<div class="col-md-3 mb-5"></div>
+<div class="col-md-9 mb-5">
+{% block content %}
+{% endblock %}
+</div></div>
+  <!-- Footer -->
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <!--% static_placeholder 'footer' %     error!!! ------ -->
+      <p class="m-0 text-center text-white">La lecture musicale avec professeur est une initiative de Yves Laporte, pianiste et enseignant</p>-->
+    </div>
+    <!-- /.container -->
+  </footer>
+
+  <!-- Bootstrap core JavaScript>
+  <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script-->
+
+ 
+ </body>
+</html>

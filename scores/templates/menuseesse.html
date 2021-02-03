@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+{% load menu_tags %}
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>La lecture musicale avec professeur</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="{% static 'css/business-frontpage.css' %}" rel="stylesheet">
+
+  <!--personnal css-->
+  <link href="{% static 'css/menu.css' %}" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">La lecture musicale avec professeur</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <div class="navbar-nav ml-auto">
+          <div class="nav-item active">
+            <a class="nav-link" href="{% url 'partitions:introLMAP' %}">Lecture et composition...</a>
+              <!--span class="sr-only">(current)</span-->
+            </a>
+          </div>
+          <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" href="#" role="button">Partitions
+            </button>
+            <div class="dropdown-menu dropdown-content"><!-- aria-labelledby="dropdownMenuLink"-->
+              <button class="dropdown-item dropdown-toggle" href="#">Piano</button>
+              <div class="dropdown-menu dropdown-content" aria-labelledby="dropdownMenuLink">
+                <a class="dropdown-item" href="#">Niveau préparatoire</a>
+                <a class="dropdown-item" href="{% url 'partitions:partNiv1' %}">Niveau 1</a>
+                <a class="dropdown-item" href="{% url 'partitions:partNiv2a' %}">Niveau 2</a>
+                <a class="dropdown-item" href="{% url 'partitions:partNiv3a' %}">Niveau 3</a>
+                <a class="dropdown-item" href="{% url 'partitions:inexistant' %}">Niveau 4</a>
+                <a class="dropdown-item" href="{% url 'partitions:inexistant' %}">Niveau 5</a>
+                <a class="dropdown-item" href="{% url 'partitions:inexistant' %}">Niveau 6</a>
+                <a class="dropdown-item" href="{% url 'partitions:inexistant' %}">Niveau 7</a>
+                <a class="dropdown-item" href="{% url 'partitions:inexistant' %}">Niveau 8</a>
+                <a class="dropdown-item" href="{% url 'partitions:inexistant' %}">Niveau 9</a>
+                <a class="dropdown-item" href="{% url 'partitions:inexistant' %}">Niveau 10</a>
+              </div>
+            </div>
+          </div>
+      <!--/div--><!--il y avait conflit avec url partitions:partitions-->
+    <div class="dropdown">
+      <button class="btn btn-secondary dropdown-toggle" href="{% url 'partitions:gammes' %}" role="button">Gammes
+      </button>
+
+      <div class="dropdown-menu dropdown-content" aria-labelledby="dropdownMenuLink">
+        <a class="dropdown-item" href="{% url 'partitions:gammes' %}">Do majeur/La mineur</a>
+        <a class="dropdown-item" href="{% url 'partitions:inexistant' %}">Do# majeur/La# mineur</a>
+        <a class="dropdown-item" href="{% url 'partitions:gammes' %}">Ré majeur/Si mineur</a>
+        <a class="dropdown-item" href="{% url 'partitions:inexistant' %}">Mib majeur/Do mineur</a>
+        <a class="dropdown-item" href="{% url 'partitions:inexistant' %}">Mi majeur/Do# mineur</a>
+        <a class="dropdown-item" href="{% url 'partitions:inexistant' %}">Fa majeur/Ré mineur</a>
+        <a class="dropdown-item" href="{% url 'partitions:inexistant' %}">Solb majeur/Mib mineur</a>
+        <a class="dropdown-item" href="{% url 'partitions:inexistant' %}">Sol majeur/Mi mineur</a>
+        <a class="dropdown-item" href="{% url 'partitions:inexistant' %}">Lab majeur/Fa mineur</a>
+        <a class="dropdown-item" href="{% url 'partitions:inexistant' %}">La majeur/Fa# mineur</a>
+        <a class="dropdown-item" href="{% url 'partitions:inexistant' %}">Sib majeur/Sol mineur</a>
+        <a class="dropdown-item" href="{% url 'partitions:inexistant' %}">Si majeur/Sol# mineur</a>
+      </div>
+    </div>
+  <!--/ul-->
+    <div class="nav-item">
+      <a class="nav-link" href="{% url 'partitions:methode' %}">Méthode</a> <!--ok--->
+    </div>
+    <div class="nav-item">
+      <a class="nav-link" href="{% url 'partitions:contactLMAP' %}">Contact</a>
+    </div>
+    <div class="nav-item">
+      <a class="nav-link" href="{% url 'admin:index' %}">Participants (login)</a>
+    </div>
+  </div>
+</div>
+</div>
+
+        <!--/ul-->
+        <!--ul class="nav">
+          {% show_menu 0 100 100 100 %}
+        </ul-->
+
+</nav>
+
+<!-- extention -->
+<div class="row">
+<div class="col-md-3 mb-5"></div>
+<div class="col-md-9 mb-5">
+{% block content %}
+{% endblock %}
+</div></div>
+  <!-- Footer -->
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <!--% static_placeholder 'footer' %     error!!! ------ -->
+      <p class="m-0 text-center text-white">La lecture musicale avec professeur est une initiative de Yves Laporte, pianiste et enseignant</p>-->
+    </div>
+    <!-- /.container -->
+  </footer>
+
+  <!-- Bootstrap core JavaScript>
+  <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script-->
+ </body>
+</html>
