@@ -2,7 +2,9 @@
 *~
 /.vscode
 __pycache__
-laproff
 db.sqlite3
 .DS_Store
 startbootstrap-business-frontpage-gh-pages
+media
+laproff
+user
