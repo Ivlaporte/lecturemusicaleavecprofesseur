@@ -12,5 +12,7 @@ urlpatterns = [
     path('methode/', views.methode, name='methode'),
     path('contactLMAP/', views.contactLMAP, name='contactLMAP'),
     path('inexistant/', views.inexistant, name='inexistant'),
+    path('level/<int:readlevel>/', views.show_level, name='level'),
     path('', views.index, name='index'),
+    
 ]

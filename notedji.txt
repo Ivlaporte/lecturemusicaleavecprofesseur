@@ -1,0 +1,2 @@
+# reprise 6 fev 2021
+# https://subscription.packtpub.com/book/web_development/9781838981952/1/ch01lvl1sec02/installing-django

@@ -34,18 +34,16 @@
     </div>
     <div class="navbar-nav ml-auto" >
       <div class="dropdown" >
-        <a href="{% url 'partitions:partNiv1' %}" class="nav-item nav-link active dropdown-toggle" style="color:lightgray;">Partitions</a>
-        <div class="dropdown-menu">
-          <a href="{% url 'partitions:partNiv1' %}" class="dropdown-item">Niveau 1</a>
-          <a href="{% url 'partitions:partNiv2a' %}" class="dropdown-item">Niveau 2</a>
-          <a href="{% url 'partitions:partNiv3a' %}" class="dropdown-item">Niveau 3</a>
-          <a href="{% url 'partitions:inexistant' %}" class="dropdown-item">Niveau 4</a>
-          <a href="{% url 'partitions:inexistant' %}" class="dropdown-item">Niveau 5</a>
-          <a href="{% url 'partitions:inexistant' %}" class="dropdown-item">Niveau 6</a>
-          <a href="{% url 'partitions:inexistant' %}" class="dropdown-item">Niveau 7</a>
-          <a href="{% url 'partitions:inexistant' %}" class="dropdown-item">Niveau 8</a>
-          <a href="{% url 'partitions:inexistant' %}" class="dropdown-item">Niveau 9</a>
-          <a href="{% url 'partitions:inexistant' %}" class="dropdown-item">Niveau 10</a>
+        <button  class="nav-item nav-link active dropdown-toggle" style="color:lightgray; ">Partitions</button>
+        <div class="dropdown-content">
+          {% if links %}
+          {% for lien in links %}
+            {% for niveau_key, niveau in lien.items %}
+              <a href="{% url 'partitions:level' readlevel=niveau %}" class="dropdown-item">{{ niveau_key }}</a>
+          
+            {% endfor %}
+          {% endfor %}
+          {% endif %}
         </div>
       </div>
       <a href="{% url 'partitions:gammes' %}" class="nav-item nav-link " style="color:lightgray;">Gammes</a>
