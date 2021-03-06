@@ -21,7 +21,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 #essai...
-app_name = 'djaLMAP' #&&
+app_name = 'lecturemusicaleavecprofesseur' #&&
 urlpatterns = [
     path('admin/', admin.site.urls),
     re_path(r'^polls/', include('polls.urls')), #? re_path(r'^polls/', include('polls.urls', namespace='polls'))?
